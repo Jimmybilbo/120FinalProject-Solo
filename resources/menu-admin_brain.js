@@ -9,3 +9,5 @@ function itemListing(name, price, img, desc) {
             <p>${desc}</p>
         </div> `;
 }
+
+// nested array that holds all the listings... each category is hidden and must be revealed by sending a number 1-5 for what should be displayed
