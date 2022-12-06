@@ -6,97 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/menu-admin_style.css">
-    <link rel="stylesheet" href="resources/grid.css">
     <title>Lɛ RESTAURäN</title>
 </head>
 
 <body>
     <section class="menu-sect">
 
-        <div class="menu-container grid-container">
+        <div class="menu-container grid-container" id="listing">
 
-            <div class="item" id="listing" onload="itemListing()">
-
-            </div>
-
-
+            <button onclick="itemListing('beenis', 50002.99, 'resources/Images/ItemImages/NoPhoto_Default.jpg', 'This is a test description.')">Click me bitch</button>
 
             <div class="menu-item">
-                <img src="resources/images/burger-img.png" alt="" class="menu-pic">
+                <img src="" alt="" class="menu-pic">
                 <button class="menu-btn">
                     <h3 class="menu-name">burger</h3>
                 </button>
                 <span class="menu-price">$52.99</span>
-                <button class="BTN-ADD" onclick="addItem(['burger', 52.99, 'resources/images/burger-img.png', 1])" type="button">ADD TO CART</button>
+                <button class="BTN-ADD" onclick="addItem(['burger', 52.99, '', 1])" type="button">ADD TO CART</button>
             </div>
             <div class="menu-item">
-                <img src="resources/images/fry-img.png"
-                    alt="" class="menu-pic">
+                <img src="" alt="" class="menu-pic">
                 <button class="menu-btn">
                     <h3 class="menu-name">fry</h3>
                 </button>
                 <span class="menu-price">$50.99</span>
-                <button class="BTN-ADD" onclick="addItem(['fry', 50.99, 'resources/images/fry-img.png', 1])" type="button">ADD TO CART</button>
+                <button class="BTN-ADD" onclick="addItem(['fry', 50.99,'', 1])" type="button">ADD TO CART</button>
             </div>
             <div class="menu-item">
-                <img src="resources/images/lemonade-img"
-                    alt="" class="menu-pic">
+                <img src="" alt="" class="menu-pic">
                 <button class="menu-btn">
                     <h3 class="menu-name">lemonade</h3>
                 </button>
                 <span class="menu-price">$52.99</span>
-                <button class="BTN-ADD" onclick="addItem(['lemonade', 52.99, 'resources/images/lemonade-img', 1])" type="button">ADD TO CART</button>
+                <button class="BTN-ADD" onclick="addItem(['lemonade', 52.99, '', 1])" type="button">ADD TO CART</button>
             </div>
             <div class="menu-item">
-                <img src="resources/images/apple-img.png"
-                    alt="" class="menu-pic">
+                <img src="" alt="" class="menu-pic">
                 <button class="menu-btn">
                     <h3 class="menu-name">apple</h3>
                 </button>
                 <span class="menu-price">$52.99</span>
-                <button class="BTN-ADD" onclick="addItem(['apple', 52.99, 'resources/images/apple-img.png', 1])" type="button">ADD TO CART</button>
+                <button class="BTN-ADD" onclick="addItem(['apple', 52.99, '', 1])" type="button">ADD TO CART</button>
             </div>
             <div class="menu-item">
-                <img src="resources/images/straw-img"
-                    alt="" class="menu-pic">
+                <img src="" alt="" class="menu-pic">
                 <button class="menu-btn">
                     <h3 class="menu-name">straw</h3>
                 </button>
                 <span class="menu-price">$52.99</span>
-                <button class="BTN-ADD" onclick="addItem(['straw', 52.99, 'resources/images/straw-img', 1])" type="button">ADD TO CART</button>
+                <button class="BTN-ADD" onclick="addItem(['straw', 52.99, '', 1])" type="button">ADD TO CART</button>
             </div>
             <div class="menu-item">
-                <img src="resources/images/burger-img.png" alt="" class="menu-pic">
+                <img src="" alt="" class="menu-pic">
                 <button class="menu-btn">
                     <h3 class="menu-name">burger</h3>
                 </button>
                 <span class="menu-price">$52.99</span>
-                <button class="BTN-ADD" onclick="addItem(['burger', 52.99, 'resources/images/burger-img.png', 1])" type="button">ADD TO CART</button>
+                <button class="BTN-ADD" onclick="addItem(['burger', 52.99, '', 1])" type="button">ADD TO CART</button>
             </div>
             <div class="menu-item">
-                <img src= "resources/images/cheese-img.avif"
-                    alt="" class="menu-pic">
+                <img src= "" alt="" class="menu-pic">
                 <button class="menu-btn">
                     <h3 class="menu-name">cheese</h3>
                 </button>
                 <span class="menu-price">$12.99</span>
-                <button class="BTN-ADD" onclick="addItem(['cheese', 12.99, 'resources/images/cheese-img.avif', 1])" type="button">ADD TO CART</button>
+                <button class="BTN-ADD" onclick="addItem(['cheese', 12.99, '', 1])" type="button">ADD TO CART</button>
             </div>
             <div class="menu-item">
-                <img src="resources/images/burger-img.png" alt="" class="menu-pic">
+                <img src="" alt="" class="menu-pic">
                 <button class="menu-btn">
                     <h3 class="menu-name">burger with cheese</h3>
                 </button>
                 <span class="menu-price">$52.99</span>
-                <button class="BTN-ADD" onclick="addItem(['burger with cheese', 52.99, 'resources/images/burger-img.png', 1])" type="button">ADD TO CART</button>
+                <button class="BTN-ADD" onclick="addItem(['burger with cheese', 52.99, '', 1])" type="button">ADD TO CART</button>
             </div>
             <div class="menu-item">
-                <img src="resources/images/burger-img.png" alt="" class="menu-pic">
+                <img src="" alt="" class="menu-pic">
                 <button class="menu-btn">
                     <h3 class="menu-name">big burger</h3>
                 </button>
                 <span class="menu-price">$52.99</span>
-                <button class="BTN-ADD" onclick="addItem(['big burger', 52.99, 'resources/images/burger-img.png', 1])" type="button">ADD TO CART</button>
+                <button class="BTN-ADD" onclick="addItem(['big burger', 52.99, '', 1])" type="button">ADD TO CART</button>
             </div>
         </div>
     </section>
