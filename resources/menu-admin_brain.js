@@ -10,3 +10,4 @@
 //     <button class="BTN-ADD" onclick="addItem()" type="button">ADD TO CART</button> `;
 // menuItemTemplate.classList.add('menu-item');
 
+const menuItemListing = document.querySelector("#listing")
