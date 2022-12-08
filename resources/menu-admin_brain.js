@@ -1,4 +1,4 @@
-var menuItemListing = document.querySelector("#listing")
+var menuItemListing = document.querySelector("#listing--section")
 
 function itemListing() {
     let img = "resources/Images/ItemImages/NoPhoto_Default.jpg"
@@ -13,16 +13,13 @@ function itemListing() {
     // any and all... if nothing is input, the description reads -No Description-
 
     menuItemListing.innerHTML += `
-        <div class="menu-item">
+        <div class="item">
             <img src="${img}" alt="item">
-            <h3>${name}</h3>
-            <span>$${price}</span>
-            <p>${desc}</p>
+            <div class="item--alignment">
+                <h3>${name}</h3>
+                <p>$${price}</p>
+            </div>
+            <p class="item--description">${desc}</p>
+            <button>Add to Cart</button>
         </div> `;
 }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     document.querySelector("#whoops").addEventListener("click", e => {
-//         itemListing('resources/Images/ItemImages/NoPhoto_Default.jpg');
-//     }); //Creates listing on click endlessly
-// });

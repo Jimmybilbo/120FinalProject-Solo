@@ -10,26 +10,33 @@
 </head>
 
 <body>
-    <section class="menu-sect">
+    <section class="menu__container"></section>
+    <section class="menu__category">
         <h3>Entrees</h3>
-        <div class="menu-container grid-container" id="listing">
-            <p id="whoops" onclick="itemListing()">Add Item</p>
+        <div class="listing__container" id="listing--section">
+            <p id="admin--feature" onclick="itemListing()">Add Item</br></br>(+)</p>
 
-            <div class="menu-item">
+            <div class="item">
                 <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
-                <h3>Burger</h3>
-                <span>$53.78</span>
-                <p>This thing sure is a singular burger. Many flavor much goodness.</p>
+                <div class="item--alignment">
+                    <h3>Burger</h3>
+                    <p>$53.78</p>
+                </div>    
+                <p class="item--description">This thing sure is a singular burger. Many flavor much goodness.</p>
+                <button>Add to Cart</button>
             </div>
 
-            <div class="menu-item">
+            <div class="item">
                 <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
-                <h3>Birgers</h3>
-                <span>$50.99</span>
-                <p>This thing sure is not a singular burger. Why one when two.</p>
+                <div class="item--alignment">
+                    <h3>Birgers</h3>
+                    <p>$50.99</p>
+                </div>
+                <p class="item--description">This thing sure is not a singular burger. Why one when two.</p>
+                <button>Add to Cart</button>
             </div>
 
-            <div class="menu-item">
+        <!-- <div class="menu-item">
                 <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                 <h3>Chick Borger</h3>
                 <span>$52.99</span>
@@ -48,7 +55,7 @@
                 <h3>Just Patty</h3>
                 <span>$52.99</span>
                 <p>-No Description-</p>
-            </div>
+            </div> -->
 
         </div>
     </section>
