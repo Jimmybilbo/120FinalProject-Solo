@@ -1,5 +1,4 @@
 /* ----- Global ----- */
-
 :root {
     --clr-1: rgb(37 38 39);
     --clr-2: rgb(86 78 88);
@@ -8,42 +7,10 @@
     --clr-5: rgb(144 78 85);
 }
 
-@keyframes slide-in {
-    0% {
-        transform: translateX(10px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-}
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-
-/* ----- Element ----- */
-
-    /* --color-primary: rgb(144 78 85);
-    --color-primary-dark: rgb(91, 47, 52);
-    --color-secondary: rgb(191 180 143);
-    --color-error: #ff0000;
-    --border-radius: 4px;
-} */
-
-.background {
-    margin: 0;
-    height: 100vh;
-    font-size: 18px;
-    background: rgba(65, 64, 64, 0.4);
-    /* 
-    these two were my original colors for the menu page -david
-    background-color: var(--clr-2);
-    color: var(--clr-1); 
-    */
 }
 
 img {
@@ -51,12 +18,7 @@ img {
     max-height: 100px;
 }
 
-a {
-    text-decoration: none;
-}
-
 /* ----- Grid ----- */
-
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -64,8 +26,6 @@ a {
 }
 
 /* ----- Menu ----- */
-
-
 .hiddenIt {
     display: none;
 }
@@ -76,10 +36,9 @@ a {
 
 .menu-item {
     height: 300px;
-    background: var(--clr-4);
+    background: green;
     display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
-    box-shadow: inset 0 0 5px var(--clr-1), 0 0 5px var(--clr-1);
+    grid-template-rows: 2fr 1fr 1fr 1fr;
 }
 
 .menu-item > * {
@@ -88,20 +47,4 @@ a {
 
 h3 {
     font-size: 30px;
-}
-
-.menu-price {
-    font-size: 25px;
-}
-
-.menu-btn {
-    background-color: transparent;
-    border: none;
-    border-radius: 20px;
-    padding: 15px 20px;
-    transition: 600ms;
-}
-
-.menu-btn:hover {
-    background-color: rgb(171 160 123);
 }
