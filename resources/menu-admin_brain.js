@@ -1,6 +1,7 @@
 var menuItemListing = document.querySelector("#listing")
 
-function itemListing(img) {
+function itemListing() {
+    let img = "resources/Images/ItemImages/NoPhoto_Default.jpg"
     let name = prompt("Product Name");
     // validation has to be only letters
 
@@ -20,9 +21,8 @@ function itemListing(img) {
         </div> `;
 }
 
-
-// nested array that holds all the listings... each category is hidden and must be revealed by sending a number 1-5 for what should be displayed
-
-menuItemListing.querySelector("#whoops").addEventListener("click", e => {
-    itemListing('resources/Images/ItemImages/NoPhoto_Default.jpg');
-}); //---Creates listing on click endlessly---
+// document.addEventListener("DOMContentLoaded", () => {
+//     document.querySelector("#whoops").addEventListener("click", e => {
+//         itemListing('resources/Images/ItemImages/NoPhoto_Default.jpg');
+//     }); //Creates listing on click endlessly
+// });
