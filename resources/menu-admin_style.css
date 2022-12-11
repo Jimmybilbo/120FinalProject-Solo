@@ -29,7 +29,7 @@
 .item > img {
     max-width: 90%;
     border: 1px solid black;
-    margin: 0.75rem 0.5rem;
+    margin: 0.75rem 0.5rem 0rem 0.5rem;
 }
 
 .item, .item--alignment, .item--description, .item--toCart  {
@@ -49,7 +49,7 @@
     background-color: white;
     margin-left: 1rem;
     margin-right: 1rem;
-    min-height: 16vh;
+    min-height: 12vh;
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: center;
@@ -76,12 +76,28 @@
     flex: 1 1 220px;
 }
 
-.listing__container > p {
+/* Menu Category Styling */
+.menu__category {
+    display: flex;
+    align-items: right;
+    flex-direction: column;
+    margin: 3.5rem 0rem;
+    
+}
+
+/* Menu Container Styling */
+.menu__container {
+    margin: 9.62597rem;
+}
+
+
+
+
+
+.menu__container > p {
     background-color: var(--clr-5);
-    max-width: 10rem;
-    min-width: 8rem;
+    height: 6rem;
     padding: 2rem;
-    margin: 0.75rem 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;

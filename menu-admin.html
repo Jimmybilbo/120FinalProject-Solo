@@ -10,26 +10,30 @@
 </head>
 
 <body>
-    <section class="menu__container"></section>
+    <section class="menu__container">
+
+        <p class=" " id="admin--feature" onclick="itemListing()">Add Item</br></br>(+)</p>
+
         <section class="menu__category">
-            <h3>Entrees</h3>
-            <div class="listing__container" id="listing--section">
-                <p class=" " id="admin--feature" onclick="itemListing()">Add Item</br></br>(+)</p>
+            <h1>Entrees</h1>
+            <div class="listing__container" id="entrees--section">
 
                 <div class="item">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
-                        <h3>Burger</h3>
+                        <p>Burger</p>
                         <p>$53.78</p>
                     </div>    
                     <p class="item--description">This thing sure is a singular burger. Many flavor much goodness.</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                    <button class="item--button" id="toRemove" onclick="">Remove Item</button>
+
                 </div>
 
                 <div class="item">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
-                        <h3>Birgers</h3>
+                        <p>Birgers</p>
                         <p>$50.99</p>
                     </div>
                     <p class="item--description">This thing sure is not a singular burger. Why one when two.</p>
@@ -39,7 +43,7 @@
                 <div class="item">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
-                        <h3>Chick Borger</h3>
+                        <p>Chick Borger</p>
                         <p>$52.99</p>
                     </div>
                     <p class="item--description">This thing sure is not a burger. Like a cow but a bird, Yum!</p>
@@ -49,7 +53,7 @@
                 <div class="item">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
-                        <h3>Pork Berg</h3>
+                        <p>Pork Berg</p>
                         <p>$51.99</p>
                     </div>
                     <p class="item--description">This thing sure is a pork burger. I don't know what that is.</p>
@@ -59,18 +63,242 @@
                 <div class="item">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
-                        <h3>Just Patty</h3>
+                        <p>Just Patty</p>
                         <p>$52.99</p>
                     </div>
                     <p class="item--description">-No Description-</p>
                     <button class="item--toCart">Add to Cart</button>
                 </div>
-
             </div>
         </section>
 
+        <section class="menu__category">
+            <h1>Drinks</h1>
+            <div class="listing__container" id="drinks--section">
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Bepis</p>
+                        <p>$3.78</p>
+                    </div>    
+                    <p class="item--description">*Movie theater crack sizzle sound*</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Coker Cala</p>
+                        <p>$0.99</p>
+                    </div>
+                    <p class="item--description">Liquid garbage</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Root Beer</p>
+                        <p>$2.99</p>
+                    </div>
+                    <p class="item--description">Is this caffinated?</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Bean Water</p>
+                        <p>$1.99</p>
+                    </div>
+                    <p class="item--description">Hot and sugared ground roasted bean water. Beans beware.</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>BW con Milk</p>
+                        <p>$2.99</p>
+                    </div>
+                    <p class="item--description">Hot and sugared ground roasted bean water... with milk. Cows beware.</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu__category">
+            <h1>Sides</h1>
+            <div class="listing__container" id="sides--section">
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>German Fries</p>
+                        <p>$5.78</p>
+                    </div>    
+                    <p class="item--description">You've had 'em French, this one just tastes reich.</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Boiled Pickles</p>
+                        <p>$5.99</p>
+                    </div>
+                    <p class="item--description">-No Description-</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Apple Sauce</p>
+                        <p>$4.99</p>
+                    </div>
+                    <p class="item--description">It's just apple sauce... no catch</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Rools</p>
+                        <p>$1.99</p>
+                    </div>
+                    <p class="item--description">You get an assortment of six! Rick, rock, royce, hills & whole grain</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>CFA Salad</p>
+                        <p>$52.99</p>
+                    </div>
+                    <p class="item--description">It's the Chick-fil-A side salad</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu__category">
+            <h1>Ingredients</h1>
+            <div class="listing__container" id="ingredients--section">
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Fallic Fallacies</p>
+                        <p>$0.78</p>
+                    </div>    
+                    <p class="item--description">Just... full of them</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>In Bad Taste</p>
+                        <p>$0.99</p>
+                    </div>
+                    <p class="item--description">of mouth</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Find God</p>
+                        <p>$0.99</p>
+                    </div>
+                    <p class="item--description">*screenshot*</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Slice Cheese</p>
+                        <p>$0.99</p>
+                    </div>
+                    <p class="item--description">-No Description-</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Lettuce Leaf</p>
+                        <p>$0.99</p>
+                    </div>
+                    <p class="item--description">-No Description-</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu__category">
+            <h1>Accessories</h1>
+            <div class="listing__container" id="accessories--section">
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Straw</p>
+                        <p>$1.78</p>
+                    </div>    
+                    <p class="item--description">-No Description-</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Napkin</p>
+                        <p>$1.99</p>
+                    </div>
+                    <p class="item--description">of mouth</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Plate</p>
+                        <p>$1.99</p>
+                    </div>
+                    <p class="item--description">Find god</br>*screenshot*</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Chair</p>
+                        <p>$50.02</p>
+                    </div>
+                    <p class="item--description">-No Description-</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                    <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                    <div class="item--alignment">
+                        <p>Table</p>
+                        <p>$5005.64</p>
+                    </div>
+                    <p class="item--description">-No Description-</p>
+                    <button class="item--toCart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        
+    </section>
     
-   
     <script src="resources/menu-admin_brain.js"></script>
 </body>
 
