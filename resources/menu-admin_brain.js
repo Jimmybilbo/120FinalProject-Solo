@@ -20,6 +20,6 @@ function itemListing() {
                 <p>$${price}</p>
             </div>
             <p class="item--description">${desc}</p>
-            <button>Add to Cart</button>
+            <button class="item--toCart">Add to Cart</button>
         </div> `;
 }
