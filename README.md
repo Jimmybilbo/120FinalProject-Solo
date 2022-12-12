@@ -1,3 +1,3 @@
 # 120FinalProject-Solo
 The actual Resturant
-The first iteration or combination/merging of blocks necessary for cart_funct (menu-admin + login-signup + header-footer)
+The first combination/merging of blocks (menu-admin + login-signup + header-footer) > Cart Functionality
