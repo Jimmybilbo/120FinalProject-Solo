@@ -12,62 +12,77 @@
 <body>
     <section class="menu__container">
 
-        <p class=" " id="admin--feature" onclick="itemListing()">Add Item</br></br>(+)</p>
+        <div class="addItem--center">
+            <p class=" " id="admin--feature" onclick="itemListing()">Add Item</br></br>(+)</p>
+        </div>
 
         <section class="menu__category">
             <h1>Entrees</h1>
             <div class="listing__container" id="entrees--section">
 
-                <div class="item">
+                <div class="item" id="item00">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Burger</p>
                         <p>$53.78</p>
                     </div>    
                     <p class="item--description">This thing sure is a singular burger. Many flavor much goodness.</p>
-                    <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                    <button class="item--button" id="toRemove" onclick="">Remove Item</button>
-
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item00')">Remove Item</button>
+                    </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item01">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Birgers</p>
                         <p>$50.99</p>
                     </div>
                     <p class="item--description">This thing sure is not a singular burger. Why one when two.</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item01')">Remove Item</button>
+                    </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item02">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Chick Borger</p>
                         <p>$52.99</p>
                     </div>
                     <p class="item--description">This thing sure is not a burger. Like a cow but a bird, Yum!</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item02')">Remove Item</button>
+                    </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item03">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Pork Berg</p>
                         <p>$51.99</p>
                     </div>
                     <p class="item--description">This thing sure is a pork burger. I don't know what that is.</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item03')">Remove Item</button>
+                    </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item04">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Just Patty</p>
                         <p>$52.99</p>
                     </div>
                     <p class="item--description">-No Description-</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item04')">Remove Item</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -76,54 +91,69 @@
             <h1>Drinks</h1>
             <div class="listing__container" id="drinks--section">
 
-                <div class="item">
+                <div class="item" id="item05">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Bepis</p>
                         <p>$3.78</p>
                     </div>    
                     <p class="item--description">*Movie theater crack sizzle sound*</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item05')">Remove Item</button>
+                    </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item06">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Coker Cala</p>
                         <p>$0.99</p>
                     </div>
                     <p class="item--description">Liquid garbage</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item06')">Remove Item</button>
+                    </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item07">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Root Beer</p>
                         <p>$2.99</p>
                     </div>
                     <p class="item--description">Is this caffinated?</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item07')">Remove Item</button>
+                    </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item08">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Bean Water</p>
                         <p>$1.99</p>
                     </div>
                     <p class="item--description">Hot and sugared ground roasted bean water. Beans beware.</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item08')">Remove Item</button>
+                    </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item09">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>BW con Milk</p>
                         <p>$2.99</p>
                     </div>
                     <p class="item--description">Hot and sugared ground roasted bean water... with milk. Cows beware.</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item09')">Remove Item</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -132,17 +162,20 @@
             <h1>Sides</h1>
             <div class="listing__container" id="sides--section">
 
-                <div class="item">
+                <div class="item" id="item10">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>German Fries</p>
                         <p>$5.78</p>
                     </div>    
                     <p class="item--description">You've had 'em French, this one just tastes reich.</p>
-                    <button class="item--toCart">Add to Cart</button>
+                    <div class="button--selection">
+                        <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                        <button class="item--button" onclick="itemRemoval('item10')">Remove Item</button>
+                    </div>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item11">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Boiled Pickles</p>
@@ -152,7 +185,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item12">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Apple Sauce</p>
@@ -162,7 +195,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item13">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Rools</p>
@@ -172,7 +205,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item14">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>CFA Salad</p>
@@ -188,7 +221,7 @@
             <h1>Ingredients</h1>
             <div class="listing__container" id="ingredients--section">
 
-                <div class="item">
+                <div class="item" id="item15">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Fallic Fallacies</p>
@@ -198,7 +231,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item16">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>In Bad Taste</p>
@@ -208,7 +241,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item17">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Find God</p>
@@ -218,7 +251,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item18">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Slice Cheese</p>
@@ -228,7 +261,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item19">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Lettuce Leaf</p>
@@ -244,7 +277,7 @@
             <h1>Accessories</h1>
             <div class="listing__container" id="accessories--section">
 
-                <div class="item">
+                <div class="item" id="item20">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Straw</p>
@@ -254,7 +287,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item21">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Napkin</p>
@@ -264,7 +297,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item22">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Plate</p>
@@ -274,7 +307,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item23">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Chair</p>
@@ -284,7 +317,7 @@
                     <button class="item--toCart">Add to Cart</button>
                 </div>
 
-                <div class="item">
+                <div class="item" id="item24">
                     <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
                     <div class="item--alignment">
                         <p>Table</p>

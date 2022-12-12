@@ -32,7 +32,7 @@
     margin: 0.75rem 0.5rem 0rem 0.5rem;
 }
 
-.item, .item--alignment, .item--description, .item--toCart  {
+.item, .item--alignment, .item--description, .button--selection  {
     margin: 0.75rem 0.5rem;
 }
 
@@ -56,7 +56,14 @@
     align-items: center;
 }
 
-.item--toCart {
+.button--selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item--button {
     margin: 0.75rem 0.5rem;
 }
 
@@ -87,16 +94,22 @@
 
 /* Menu Container Styling */
 .menu__container {
-    margin: 9.62597rem;
+    margin: 9.625rem;
 }
 
 
 
 
 
-.menu__container > p {
+.addItem--center {
+   display: flex;
+   justify-content: center; 
+}
+
+.addItem--center > p {
     background-color: var(--clr-5);
     height: 6rem;
+    width: 100vw;
     padding: 2rem;
     display: flex;
     align-items: center;

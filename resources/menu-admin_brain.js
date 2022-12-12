@@ -9,11 +9,10 @@ function itemListing() {
 
     let dollar = prompt("Product Price");
     // validation has to be only numbers greater than 0 but no more than 4 characters in length
-    let price = `${dollar}.00`
+    let price = `${dollar}`
 
     let desc = prompt("Product Description");
     // any and all... if nothing is input, the description reads -No Description-
-
 
     menuItemListing.innerHTML += `
         <div class="item">
@@ -25,4 +24,9 @@ function itemListing() {
             <p class="item--description">${desc}</p>
             <button class="item--toCart">Add to Cart</button>
         </div> `;
+}
+
+function itemRemoval(clicked) {
+    var itemID = document.querySelector(`#${clicked}`);
+    itemID.classList.add("hiddenIt");
 }
