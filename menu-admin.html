@@ -11,10 +11,10 @@
 
 <body>
     <section class="menu__container">
+        <input type="button" id="adminMode" value="Admin Mode OFF" class=" " onclick="tgl();">
+        <!--  -->
 
-        <div class="addItem--center">
-            <p class=" " id="admin--feature" onclick="itemListing()">Add Item</br></br>(+)</p>
-        </div>
+        <p class="add__item--button hiddenIt" id="toAdd" onclick="itemListing()">Add Item</br>(+)</p>
 
         <section class="menu__category">
             <h1>Entrees</h1>
@@ -29,7 +29,7 @@
                     <p class="item--description">This thing sure is a singular burger. Many flavor much goodness.</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item00')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item00')">Remove Item</button>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@
                     <p class="item--description">This thing sure is not a singular burger. Why one when two.</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item01')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item01')">Remove Item</button>
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@
                     <p class="item--description">This thing sure is not a burger. Like a cow but a bird, Yum!</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item02')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item02')">Remove Item</button>
                     </div>
                 </div>
 
@@ -68,7 +68,7 @@
                     <p class="item--description">This thing sure is a pork burger. I don't know what that is.</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item03')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item03')">Remove Item</button>
                     </div>
                 </div>
 
@@ -78,10 +78,10 @@
                         <p>Just Patty</p>
                         <p>$52.99</p>
                     </div>
-                    <p class="item--description">-No Description-</p>
+                    <p class="item--description">No Description-</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item04')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item04')">Remove Item</button>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                     <p class="item--description">*Movie theater crack sizzle sound*</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item05')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item05')">Remove Item</button>
                     </div>
                 </div>
 
@@ -113,7 +113,7 @@
                     <p class="item--description">Liquid garbage</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item06')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item06')">Remove Item</button>
                     </div>
                 </div>
 
@@ -126,7 +126,7 @@
                     <p class="item--description">Is this caffinated?</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item07')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item07')">Remove Item</button>
                     </div>
                 </div>
 
@@ -139,7 +139,7 @@
                     <p class="item--description">Hot and sugared ground roasted bean water. Beans beware.</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item08')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item08')">Remove Item</button>
                     </div>
                 </div>
 
@@ -152,7 +152,7 @@
                     <p class="item--description">Hot and sugared ground roasted bean water... with milk. Cows beware.</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item09')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item09')">Remove Item</button>
                     </div>
                 </div>
             </div>
@@ -171,7 +171,7 @@
                     <p class="item--description">You've had 'em French, this one just tastes reich.</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item10')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item10')">Remove Item</button>
                     </div>
                 </div>
 
@@ -181,10 +181,10 @@
                         <p>Boiled Pickles</p>
                         <p>$5.99</p>
                     </div>
-                    <p class="item--description">-No Description-</p>
+                    <p class="item--description">No Description-</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item11')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item11')">Remove Item</button>
                     </div>
                 </div>
 
@@ -197,7 +197,7 @@
                     <p class="item--description">It's just apple sauce... no catch</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item12')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item12')">Remove Item</button>
                     </div>
                 </div>
 
@@ -210,7 +210,7 @@
                     <p class="item--description">You get an assortment of six! Rick, rock, royce, hills & whole grain</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item13')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item13')">Remove Item</button>
                     </div>
                 </div>
 
@@ -223,7 +223,7 @@
                     <p class="item--description">It's the Chick-fil-A side salad</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item14')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item14')">Remove Item</button>
                     </div>
                 </div>
             </div>
@@ -242,7 +242,7 @@
                     <p class="item--description">Just... full of them</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item15')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item15')">Remove Item</button>
                     </div>
                 </div>
 
@@ -255,7 +255,7 @@
                     <p class="item--description">of mouth</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item16')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item16')">Remove Item</button>
                     </div>
                 </div>
 
@@ -268,7 +268,7 @@
                     <p class="item--description">*screenshot*</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item17')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item17')">Remove Item</button>
                     </div>
                 </div>
 
@@ -278,10 +278,10 @@
                         <p>Slice Cheese</p>
                         <p>$0.99</p>
                     </div>
-                    <p class="item--description">-No Description-</p>
+                    <p class="item--description">No Description-</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item18')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item18')">Remove Item</button>
                     </div>
                 </div>
 
@@ -291,10 +291,10 @@
                         <p>Lettuce Leaf</p>
                         <p>$0.99</p>
                     </div>
-                    <p class="item--description">-No Description-</p>
+                    <p class="item--description">No Description-</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item19')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item19')">Remove Item</button>
                     </div>
                 </div>
             </div>
@@ -310,10 +310,10 @@
                         <p>Straw</p>
                         <p>$1.78</p>
                     </div>    
-                    <p class="item--description">-No Description-</p>
+                    <p class="item--description">No Description-</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item20')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item20')">Remove Item</button>
                     </div>
                 </div>
 
@@ -323,10 +323,10 @@
                         <p>Napkin</p>
                         <p>$1.99</p>
                     </div>
-                    <p class="item--description">of mouth</p>
+                    <p class="item--description">No Description-</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item21')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item21')">Remove Item</button>
                     </div>
                 </div>
 
@@ -336,10 +336,10 @@
                         <p>Plate</p>
                         <p>$1.99</p>
                     </div>
-                    <p class="item--description">Find god</br>*screenshot*</p>
+                    <p class="item--description">No Description-</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item22')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item22')">Remove Item</button>
                     </div>
                 </div>
 
@@ -349,10 +349,10 @@
                         <p>Chair</p>
                         <p>$50.02</p>
                     </div>
-                    <p class="item--description">-No Description-</p>
+                    <p class="item--description">No Description-</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item23')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item23')">Remove Item</button>
                     </div>
                 </div>
 
@@ -362,10 +362,10 @@
                         <p>Table</p>
                         <p>$5005.64</p>
                     </div>
-                    <p class="item--description">-No Description-</p>
+                    <p class="item--description">No Description-</p>
                     <div class="button--selection">
                         <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                        <button class="item--button" onclick="itemRemoval('item24')">Remove Item</button>
+                        <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item24')">Remove Item</button>
                     </div>
                 </div>
             </div>

@@ -42,7 +42,7 @@ function itemListing() {
             <p class="item--description">${desc}</p>
             <div class="button--selection">
                 <button class="item--button" id="toCart" onclick="">Add to Cart</button>
-                <button class="item--button" onclick="itemRemoval('item${itemIndex}')">Remove Item</button>
+                <button class="item--button" id="toRemove" onclick="itemRemoval('item${itemIndex}')">Remove Item</button>
             </div>
         </div> `;
 }
@@ -50,4 +50,24 @@ function itemListing() {
 function itemRemoval(clicked) {
     var itemID = document.querySelector(`#${clicked}`);
     itemID.classList.add("hiddenIt");
+}
+
+function tgl() {
+    var t = document.querySelector("#adminMode");
+    var addItem = document.querySelector("#toAdd");
+    var removeItem = document.querySelectorAll("#toRemove");
+
+    if (t.value === "Admin Mode ON") {
+        addItem.classList.add("hiddenIt");
+        for (const item of removeItem) { item.classList.add("hiddenIt"); }
+        t.value="Admin Mode OFF";
+    }
+    else if (t.value === "Admin Mode OFF") {
+        addItem.classList.remove("hiddenIt");
+        for (const item of removeItem) { item.classList.remove("hiddenIt"); }
+
+        t.value="Admin Mode ON";
+    }
+
+    // var removeItem = document.getElementById("#toRemove");
 }

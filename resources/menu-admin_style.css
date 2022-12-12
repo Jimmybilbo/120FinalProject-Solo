@@ -101,18 +101,10 @@
 
 
 
-.addItem--center {
-   display: flex;
-   justify-content: center; 
-}
-
-.addItem--center > p {
-    background-color: var(--clr-5);
+.add__item--button {
     height: 6rem;
-    width: 100vw;
     padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    border: 1px solid black;
+    background-color: var(--clr-5);
 }
