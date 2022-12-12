@@ -3,20 +3,34 @@ var itemIndex = 24
 function itemListing() {
     itemIndex += 1;
 
-    let location = prompt("Where would you like this listing placed?\n(Entrees[0] / Drinks[1] / Sides[2] / Ingredients[3] / Accessories[4])");
-    // validation has can be word or number, word has to be exact match (non case sensitive), number must be 0-4
+    var locationInput = prompt("Where would you like this listing placed?\nEntrees / Drinks / Sides / Ingredients / Accessories");
+    var location = locationInput.toLowerCase();
+    // validation has can be word, word has to be exact match (non case sensitive)
+    while (location !== "entrees" && location !== "drinks" && location !== "sides" && location !== "ingredients" && location !== "accessories") {
+        locationInput = prompt("Invalid Input!\nPlease, enter the category name of where you want this item!\nEntrees / Drinks / Sides / Ingredients / Accessories");
+        location = locationInput.toLowerCase();
+        if (locationInput === null) { return; }
+    }
+    if (locationInput === null) { return; }
+
     let menuItemListing = document.querySelector(`#${location}--section`);
-
     let img = "NoPhoto_Default.jpg"
-    let name = prompt("Product Name");
+
+    var name = prompt("Product Name");
     // validation has to be only letters
+    while (!isNaN(name) || name === null) {
+        name = prompt("Invalid Input!\nPlease, enter the name of the product in letters!");
+    }
 
-    let dollar = prompt("Product Price");
+    var price = Number(prompt("Product Price (Whole Dollars Only)"));
     // validation has to be only numbers greater than 0 but no more than 4 characters in length
-    let price = `${dollar}`
+    while (isNaN(price)) {
+        price = Number(prompt("Invalid Input!\nPlease, enter the price of the product in whole dollars!"));
+    }
 
-    let desc = prompt("Product Description");
+    var desc = prompt("Product Description");
     // any and all... if nothing is input, the description reads -No Description-
+    if (desc === "" || desc === null) { desc = "No Description-" }
 
     menuItemListing.innerHTML += `
         <div class="item" id="item${itemIndex}">
