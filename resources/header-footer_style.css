@@ -13,8 +13,8 @@
     box-sizing: border-box;
 }
 
-/* Start: General Style */
-.partStyle::after{
+/* General Style */
+.title--underBar::after{
     display: block;
     height: 0.15rem;
     width: 10vw;
@@ -27,22 +27,31 @@
 .hiddenIt {
     display: none;
 }
-/* End: General Style */
 
-/* Start: Header Container */
-.hero-container {
+/* Scroll Styling */
+.nav--transparent {
+    display: flex;
+    height: 20vh;
+}
+
+.nav--sticky {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    background-color: var(--clr-2);
+    border-bottom: solid #312F2F 1px;
+}
+
+/* Header Container */
+.hero__container {
     display: flex;
     flex-direction: column;
     background-color: var(--clr-5);
-    height: 50vh;
-}
-/* Start: Header Head */
-.transparent {
-    display: flex;
-    height: 15vh;
+    height: 40vh;
 }
 
-.top-content {
+.horiz__containter {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,44 +59,41 @@
     width: 65vw;
 }
 
-.site {
+.site--logo {
     font-size: 2rem;
     color: var(--clr-3);
 }
 
-.sticky {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 5vh;
-    background-color: rgb(216, 85, 94);
-    border-bottom: solid #312F2F 1px;
-}
-
-.nav-bar, li {
+.nav--bar, li {
     display: flex;
     list-style: none;
     padding: .5rem .5rem .5rem 1.5rem;
 }
 
-.nav-bar li a.unchanged {
+.nav--bar li a.unchanged {
     color: var(--clr-3);
 }
 
-.nav-bar a:link, a:visited {
+.nav--bar a:link, a:visited {
     text-decoration: none;
     color: var(--clr-1);
 }
 
-.nav-bar a:hover {
+.nav--bar a:hover {
     text-decoration: none;
     color: var(--clr-3);
     transition-duration: .3s;
 }
-/* Start: Header Body*/
-.callCard {
+
+.hero--callCard {
     width: 62vw;
     display: flex;
     flex-direction: column;
     margin: auto auto;
+}
+
+/* Placeholder (Delete on merge) */
+.placeholder {
+    background-color: darkcyan;
+    height: 100vh;
 }
