@@ -68,6 +68,4 @@ function tgl() {
 
         t.value="Admin Mode ON";
     }
-
-    // var removeItem = document.getElementById("#toRemove");
 }
