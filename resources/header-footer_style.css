@@ -1,54 +1,3 @@
-:root {
-    --clr-1: rgb(37 38 39);
-    --clr-2: rgb(86 78 88);
-    --clr-3: rgb(242 239 233);
-    --font-primary: rgb(191 180 143);
-    --color-primary: rgb(144 78 85);
-    --color-primary-dark: rgb(91, 47, 52);
-}
-
-/* Start: General Style */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-h1 {
-    font-weight:900;
-    font-size: 2.75rem;
-    color: var(--font-primary);
-    margin-bottom: 1rem;
-}
-
-h3 {
-    font-weight:900;
-    font-size: 1.5rem;
-    color: var(--font-primary);
-    margin-top: 1rem;
-}
-
-.partStyle::after{
-    display: block;
-    height: 2px;
-    width: 150px;
-    border-color: var(--color-primary);
-    content: " ";
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 40px;
-}
-
-.partStyle2::after{
-    display: block;
-    height: 2px;
-    width: 250px;
-    background-color: var(--color-primary);
-    content: " ";
-    margin-top: 10px;
-}
-/* End: General Style */
-
 /* ----- Global ----- */
 :root {
     --clr-1: rgb(37 38 39);
@@ -59,23 +8,33 @@ h3 {
 }
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+/* Start: General Style */
+.partStyle::after{
+    display: block;
+    height: 0.15rem;
+    width: 10vw;
+    background-color: black;
+    content: " ";
+    margin-top: 0.5rem;
+    margin-bottom: 1rem ;
 }
 
 .hiddenIt {
     display: none;
 }
+/* End: General Style */
 
 /* Start: Header Container */
 .hero-container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(239, 98, 108);
-    background-image: linear-gradient(rgba(239, 98, 108, 0.9), rgba(52, 58, 64, 1));
-    height: 75vh;
-    /* height: 75000000vh; */
+    background-color: var(--clr-5);
+    height: 50vh;
 }
 /* Start: Header Head */
 .transparent {
@@ -92,9 +51,8 @@ h3 {
 }
 
 .site {
-    font-weight:900;
     font-size: 2rem;
-    color: #F6E8EA
+    color: var(--clr-3);
 }
 
 .sticky {
@@ -109,40 +67,27 @@ h3 {
 .nav-bar, li {
     display: flex;
     list-style: none;
-    padding: .5em .5em .5em 1.5em;
+    padding: .5rem .5rem .5rem 1.5rem;
 }
 
 .nav-bar li a.unchanged {
-    color: #F6E8EA;
+    color: var(--clr-3);
 }
 
 .nav-bar a:link, a:visited {
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.05rem;
-    color: #22181C;
+    color: var(--clr-1);
 }
 
 .nav-bar a:hover {
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.05rem;
-    color: #F6E8EA;
+    color: var(--clr-3);
     transition-duration: .3s;
 }
 /* Start: Header Body*/
-.headbod {
+.callCard {
     width: 62vw;
     display: flex;
     flex-direction: column;
-    text-align: left;
     margin: auto auto;
-    /* margin-top: 10vh; */
-}
-
-.callCard {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
