@@ -14,40 +14,38 @@
         </div>
     </section>
 
-    <section class="body__container" id="bodySection">
+    <div class="body__container--layout">
+        <section class="body__container" id="bodySection">
 
-        <div class="hero__container"> <!-- I believe this div will be the top part of the page -->
-            <header class="nav--transparent" id="navSection">
-                <div class="horiz__containter">
-                    <div class="site--logo">Lɛ RESTAURäN</div>
-                    <ul class="nav--bar">
-                        <li><a href="#" class="unchanged">Home</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Reservations</a></li>
-                        <li><a href="#" onclick=""><ion-icon name="cart-outline"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="person-outline"></ion-icon></a></li>
-                    </ul>
+            <div class="hero__container"> <!-- I believe this div will be the top part of the page -->
+                <header class="nav--transparent" id="navSection">
+                    <div class="horiz__containter">
+                        <div class="site--logo">Lɛ RESTAURäN</div>
+                        <ul class="nav--bar">
+                            <li><a href="#" class="unchanged">Home</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Reservations</a></li>
+                            <li><a href="#" onclick=""><ion-icon name="cart-outline"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="person-outline"></ion-icon></a></li>
+                        </ul>
+                    </div>
+                </header>
+
+                <div class="hero--callCard">
+                    <h1 class="title--underBar">Lɛ RESTAURäN</br></h1>
+                    <p>A Sophisticated Fine Dining Experience</br>Offering a Wide Variety of Expedient Food Entrées</p>
                 </div>
-            </header>
-
-            <div class="hero--callCard">
-                <h1 class="title--underBar">Lɛ RESTAURäN</br></h1>
-                <p>A Sophisticated Fine Dining Experience</br>Offering a Wide Variety of Expedient Food Entrées</p>
             </div>
-        </div>
 
-        <section class="menu__container"> <!-- Menu-Admin html here -->
-            <div class="placeholder"></div>
-        </section> 
+            <section class="menu__container"> <!-- Menu-Admin html here -->
+                <div class="placeholder"></div>
+            </section> 
 
-        <footer></footer>
-        
+            <footer></footer>
+        </section>
 
-
-        <section></section> <!-- I think this is where I will have the cart script... I need to think how to make it flex row with the "body__container" -->
-
-
-    </section>
+        <section class="cart__container"></section> <!-- I think this is where I will have the cart script... I need to think how to make it flex row with the "body__container" -->
+    </div>
 
     <script src="resources/header-footer_brain.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
