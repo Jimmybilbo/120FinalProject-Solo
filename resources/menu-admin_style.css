@@ -1,0 +1,104 @@
+/* ----- Global ----- */
+:root {
+    --clr-1: rgb(37 38 39);
+    --clr-2: rgb(86 78 88);
+    --clr-3: rgb(242 239 233);
+    --clr-4: rgb(191 180 143);
+    --clr-5: rgb(144 78 85);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hiddenIt {
+    display: none;
+}
+
+/* Item Styling */
+.item {
+    text-align: center;
+    max-width: 14rem;
+    background-color: var(--clr-3);
+}
+
+.item > img {
+    max-width: 90%;
+    border: 1px solid black;
+    margin: 0.75rem 0.5rem 0rem 0.5rem;
+}
+
+.item, .item--alignment, .item--description, .button--selection  {
+    margin: 0.75rem 0.5rem;
+}
+
+.item--alignment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.item--description {
+    background-color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    min-height: 12vh;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.button--selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item--button {
+    margin: 0.75rem 0.5rem;
+}
+
+/* Category Styling */
+.listing__container > * {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.listing__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.listing__container > .item {
+    flex: 1 1 220px;
+}
+
+/* Menu Category Styling */
+.menu__category {
+    display: flex;
+    align-items: right;
+    flex-direction: column;
+    margin: 3.5rem 0rem;
+    
+}
+
+/* Menu Container Styling */
+.menu__container {
+    margin: 9.625rem;
+}
+
+.add__item--button {
+    height: 6rem;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid black;
+    background-color: var(--clr-5);
+}
