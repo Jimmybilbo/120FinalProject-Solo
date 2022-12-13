@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector("#whoops").addEventListener("click", e => {
         e.preventDefault();
-        alert("Whoops... too bad so sad.... sucks to suck..... idk, pull up Inspect element or something")
+        alert("Whoops...\nToo bad so sad...\nSucks to suck...\nIdk, pull up inspect element or something...\nOr just keep crying...")
     });
 
     loginForm.querySelector("#guestLogin").addEventListener("click", e => {
