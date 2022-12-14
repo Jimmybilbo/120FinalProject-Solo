@@ -9,7 +9,7 @@
 </head>
 <body>
     
-    <section class="background" id="loginSection"> <!-- Login-Signup html here -->
+    <section style="position: fixed; z-index: 2;" class="background" id="loginSection"> <!-- Login-Signup html here -->
         <div class="login__container">
             
             <form class="form" id="login">
@@ -68,19 +68,19 @@
         </div>
     </section>
 
-    <div class="body__container--layout">
-        <section class="hiddenIt" id="bodySection">
+    <div style="position: relative;" class="body__container--layout">
+        <section class="body__container" id="bodySection">
 
             <div class="hero__container"> <!-- I believe this div will be the top part of the page -->
                 <header class="nav--transparent" id="navSection">
                     <div class="horiz__containter">
                         <div class="site--logo">Lɛ RESTAURäN</div>
                         <ul class="nav--bar">
-                            <li><a href="#" class="unchanged">Home</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">Reservations</a></li>
-                            <li><a href="#" onclick=""><ion-icon name="cart-outline"></ion-icon></a></li>
-                            <li><a href="#"><ion-icon name="person-outline"></ion-icon></a></li>
+                            <li><a href="">Home</a></li>
+                            <li><a href="#" class="unchanged">Menu</a></li>
+                            <li><a href="">Reservations</a></li>
+                            <li><a href="#"><ion-icon name="cart-outline"></ion-icon></a></li> 
+                            <li><a href="" onclick="logout()" alt="Logout"><ion-icon name="person-outline"></ion-icon></a></li>
                         </ul>
                     </div>
                 </header>
@@ -456,7 +456,7 @@
                 <div class="horiz__containter">
                     <ul class="nav--bar">
                         <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                        <li><a href="https://www.youtube.com/@jimmybilbo3471"><ion-icon name="logo-youtube"></ion-icon></a></li>
                         <li><a href="#"><ion-icon name="logo-tiktok"></ion-icon></a></li>
                         <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
                         <li><a href="#"><ion-icon name="logo-nodejs"></ion-icon></a></li>

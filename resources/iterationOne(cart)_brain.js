@@ -66,14 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.querySelector("#guestLogin").addEventListener("click", e => {
         e.preventDefault();
         lockBox.classList.replace("background", "hiddenIt");
-        bodyBox.classList.replace("hiddenIt", "body__container");
     });
 
     createAccountForm.querySelector("#guestLogin").addEventListener("click", e => {
         e.preventDefault();
         lockBox.classList.replace("background", "hiddenIt");
-        bodyBox.classList.replace("hiddenIt", "body__container");
-
     });
 });
 
@@ -113,8 +110,6 @@ createAccountForm.addEventListener("submit", e => {
         document.querySelector("#confirmPassword").value = "";
 
         lockBox.classList.replace("background", "hiddenIt");
-        bodyBox.classList.replace("hiddenIt", "body__container");
-
     }
 });
 
@@ -125,13 +120,10 @@ loginForm.addEventListener("submit", e => {
 
     if (email === "admin@email.com" && password === "password1") {
         lockBox.classList.replace("background", "hiddenIt");
-        bodyBox.classList.replace("hiddenIt", "body__container");
     } else if (email === "jimmybilbo@email.com" && password === "password1") {
         lockBox.classList.replace("background", "hiddenIt");
-        bodyBox.classList.replace("hiddenIt", "body__container");
     } else if (email === checkItEmail && password === checkItPass) {
         lockBox.classList.replace("background", "hiddenIt");
-        bodyBox.classList.replace("hiddenIt", "body__container");
     } else {
         setFormMessage(loginForm, "Invalid username/password combination");
     }
@@ -208,4 +200,8 @@ function tgl() {
 
         t.value="Admin Mode ON";
     }
+}
+
+function logout() {
+    lockBox.classList.replace("hiddenIt", "background");
 }
