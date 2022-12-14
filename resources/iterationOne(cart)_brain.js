@@ -1,3 +1,5 @@
+alert("beep");
+
 // Variables
 var loginForm = document.querySelector("#login");
 var createAccountForm = document.querySelector("#createAccount");
@@ -134,9 +136,13 @@ loginForm.addEventListener("submit", e => {
     const password = document.querySelector("#loginPassword").value;
 
     if (email === "admin@email.com" && password === "password1") {
+        for (const item of removeItem) { item.classList.remove("hiddenIt"); }
         lockBox.classList.replace("background", "hiddenIt");
         heroBox.classList.replace("hero__container", "hiddenIt");
         adminButton.classList.remove("hiddenIt");
+        addItem.classList.remove("hiddenIt");
+
+
     } else if (email === "jimmybilbo@email.com" && password === "password1") {
         lockBox.classList.replace("background", "hiddenIt");
         nav.classList.remove("nav--sticky");
@@ -204,18 +210,24 @@ function itemRemoval(clicked) {
 }
 
 function tgl() {
-    if (t.value === "Admin Mode ON") {
-        addItem.classList.add("hiddenIt");
-        for (const item of removeItem) { item.classList.add("hiddenIt"); }
-        t.value="Admin Mode OFF";
-    }
-    else if (t.value === "Admin Mode OFF") {
-        addItem.classList.remove("hiddenIt");
-        for (const item of removeItem) { item.classList.remove("hiddenIt"); }
-        t.value="Admin Mode ON";
+    if (t.value === "Admin Logout") {
+        logout()
     }
 }
 
 function logout() {
+    for (const item of removeItem) { item.classList.add("hiddenIt"); }
     lockBox.classList.replace("hiddenIt", "background");
+    // cCardBox.classList.replace("hiddenIt", "hero--callCard");
+    heroBox.classList.replace("hiddenIt", "hero__container");
+    nav.classList.add("nav--sticky");
+    adminButton.classList.add("hiddenIt");
+    addItem.classList.add("hiddenIt");
+    document.querySelector("#signupNameF").value = ""; 
+    document.querySelector("#signupNameL").value = ""; 
+    document.querySelector("#signupEmail").value = "";
+    document.querySelector("#signupPassword").value = "";
+    document.querySelector("#confirmPassword").value = "";
+    document.querySelector("#loginEmail").value = "";
+    document.querySelector("#loginPassword").value = "";
 }
