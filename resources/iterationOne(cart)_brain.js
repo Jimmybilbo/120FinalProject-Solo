@@ -1,17 +1,39 @@
+// Variables
+var loginForm = document.querySelector("#login");
+var createAccountForm = document.querySelector("#createAccount");
+
+var lockBox = document.querySelector("#loginSection");
+var bodyBox = document.querySelector("#bodySection");
+var heroBox = document.querySelector("#headerSection")
+var cCardBox = document.querySelector("#callCard");
+var adminButton = document.querySelector("#adminMode");
+
+var subFName;
+var subLName;
+var subEmail;
+var signPass;
+var conPass;
+
+var checkItEmail = localStorage.getItem("email");
+var checkItPass = localStorage.getItem("password");
+
+var nav = document.querySelector("#navSection");
+
+var itemIndex = 24
+var t = document.querySelector("#adminMode");
+var addItem = document.querySelector("#toAdd");
+var removeItem = document.querySelectorAll("#toRemove");
+
 // Header footer Script
 window.onscroll = function() { addSticky() };
-
 function addSticky() {
-    var nav = document.getElementById("navSection");
     var sticky = nav.offsetTop;
 
     if (window.pageYOffset > sticky) {
         nav.classList.add("nav--sticky");
-        // nav.classList.remove("nav--transparent");
     }
     else {
         nav.classList.remove("nav--sticky");
-        // nav.classList.add("nav--transparent");
     }
 }
 
@@ -30,20 +52,6 @@ function clearInputError(inputElement) {
     inputElement.classList.remove("form__input--error");
     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 }
-
-var loginForm = document.querySelector("#login");
-var createAccountForm = document.querySelector("#createAccount");
-var lockBox = document.querySelector("#loginSection");
-var bodyBox = document.querySelector("#bodySection");
-
-var subFName;
-var subLName;
-var subEmail;
-var signPass;
-var conPass;
-
-var checkItEmail = localStorage.getItem("email");
-var checkItPass = localStorage.getItem("password");
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#linkCreateAccount").addEventListener("click", e => {
@@ -66,11 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.querySelector("#guestLogin").addEventListener("click", e => {
         e.preventDefault();
         lockBox.classList.replace("background", "hiddenIt");
+        nav.classList.remove("nav--sticky");
+        cCardBox.classList.replace("hiddenIt", "hero--callCard");
     });
 
     createAccountForm.querySelector("#guestLogin").addEventListener("click", e => {
         e.preventDefault();
         lockBox.classList.replace("background", "hiddenIt");
+        nav.classList.remove("nav--sticky");
+        cCardBox.classList.replace("hiddenIt", "hero--callCard");
+
     });
 });
 
@@ -110,6 +123,8 @@ createAccountForm.addEventListener("submit", e => {
         document.querySelector("#confirmPassword").value = "";
 
         lockBox.classList.replace("background", "hiddenIt");
+        nav.classList.remove("nav--sticky");
+        cCardBox.classList.replace("hiddenIt", "hero--callCard");
     }
 });
 
@@ -120,18 +135,22 @@ loginForm.addEventListener("submit", e => {
 
     if (email === "admin@email.com" && password === "password1") {
         lockBox.classList.replace("background", "hiddenIt");
+        heroBox.classList.replace("hero__container", "hiddenIt");
+        adminButton.classList.remove("hiddenIt");
     } else if (email === "jimmybilbo@email.com" && password === "password1") {
         lockBox.classList.replace("background", "hiddenIt");
+        nav.classList.remove("nav--sticky");
+        cCardBox.classList.replace("hiddenIt", "hero--callCard");
     } else if (email === checkItEmail && password === checkItPass) {
         lockBox.classList.replace("background", "hiddenIt");
+        nav.classList.remove("nav--sticky");
+        cCardBox.classList.replace("hiddenIt", "hero--callCard");
     } else {
         setFormMessage(loginForm, "Invalid username/password combination");
     }
 });
 
 // Menu admin Script
-var itemIndex = 24
-
 function itemListing() {
     itemIndex += 1;
 
@@ -185,10 +204,6 @@ function itemRemoval(clicked) {
 }
 
 function tgl() {
-    var t = document.querySelector("#adminMode");
-    var addItem = document.querySelector("#toAdd");
-    var removeItem = document.querySelectorAll("#toRemove");
-
     if (t.value === "Admin Mode ON") {
         addItem.classList.add("hiddenIt");
         for (const item of removeItem) { item.classList.add("hiddenIt"); }
@@ -197,7 +212,6 @@ function tgl() {
     else if (t.value === "Admin Mode OFF") {
         addItem.classList.remove("hiddenIt");
         for (const item of removeItem) { item.classList.remove("hiddenIt"); }
-
         t.value="Admin Mode ON";
     }
 }

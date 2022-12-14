@@ -129,7 +129,7 @@
     max-width: 400px;
     margin: 1rem;
     padding: 2rem;
-    box-shadow: 0 0 40px rgpa(0,0,0,0.2);
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
     border-radius: var(--border-radius);
     background: #FFFFFF;
 }

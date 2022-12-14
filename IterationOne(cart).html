@@ -71,8 +71,8 @@
     <div style="position: relative;" class="body__container--layout">
         <section class="body__container" id="bodySection">
 
-            <div class="hero__container"> <!-- I believe this div will be the top part of the page -->
-                <header class="nav--transparent" id="navSection">
+            <div class="hero__container" id="headerSection"> <!-- I believe this div will be the top part of the page -->
+                <header class="nav--transparent nav--sticky" id="navSection">
                     <div class="horiz__containter">
                         <div class="site--logo">Lɛ RESTAURäN</div>
                         <ul class="nav--bar">
@@ -85,14 +85,14 @@
                     </div>
                 </header>
 
-                <div class="hero--callCard">
+                <div class="hiddenIt" id="callCard">
                     <h1 class="title--underBar">Lɛ RESTAURäN</br></h1>
                     <p>A Sophisticated Fine Dining Experience</br>Offering a Wide Variety of Expedient Food Entrées</p>
                 </div>
             </div>
 
             <section class="menu__container"> <!-- Menu-Admin html here -->
-                <input type="button" id="adminMode" value="Admin Mode OFF" class=" " onclick="tgl();">
+                <input type="button" id="adminMode" value="Admin Mode OFF" class="hiddenIt" onclick="tgl();">
 
                 <p class="add__item--button hiddenIt" id="toAdd" onclick="itemListing()">Add Item</br>(+)</p>
 
