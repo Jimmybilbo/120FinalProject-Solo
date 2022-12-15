@@ -4,9 +4,485 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="resources/iterationOne(cart)_style.css">
+    <title>Lɛ RESTAURäN</title>
 </head>
 <body>
     
+    <section style="position: fixed; z-index: 2;" class="background" id="loginSection"> <!-- Login-Signup html here -->
+        <div class="login__container">
+            
+            <form class="form" id="login">
+                <h1 class="form__title">Login</h1>
+                <div class="form__message form__message--error"></div>
+
+                <div class="form__input-group">
+                    <input type="text" class="form__input" id="loginEmail" autofocus placeholder="Email Address" >
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <div class="form__input-group">
+                    <input type="password" class="form__input" id="loginPassword" autofocus placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <button class="form__button" type="submit">Continue</button>
+                <p class="form__text"><a href="#" class="form__link" id="whoops">Forgot Password?</a></p>
+                <p class="form__text"><a class="form__link" id="linkCreateAccount">Create Account</a></p>
+                <p class="form__text"><a class="form__link" id="guestLogin">Continue as Guest</a></p>
+            </form>
+
+            <form class="form hiddenIt" id="createAccount">
+                <h1 class="form__title">Create Account</h1>
+
+                <div class="form__input-group">
+                    <input type="text"  class="form__input" id="signupNameF" autofocus placeholder="First Name" > 
+                    <div class="form__input-error-message"></div>
+                </div> 
+
+                <div class="form__input-group">
+                    <input type="text"  class="form__input" id="signupNameL" autofocus placeholder="Last Name" >
+                    <div class="form__input-error-message"></div>
+                </div> 
+
+                <div class="form__input-group">
+                    <input type="text" class="form__input" id="signupEmail" autofocus placeholder="Email Address" >
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <div class="form__input-group">
+                    <input type="password" class="form__input" id="signupPassword" autofocus placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <div class="form__input-group">
+                    <input type="password" class="form__input" id="confirmPassword"  placeholder="Confirm Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <div class="form__message form__message--error"></div>
+                <button class="form__button" id="createButton" type="submit">Continue</button>
+                <p class="form__text"><a class="form__link" id="linkLogin">Have an Account? Sign in</a></p>
+                <p class="form__text"><a class="form__link" id="guestLogin">Continue as Guest</a></p>
+            </form>
+        </div>
+    </section>
+
+    <div style="position: relative;" class="body__container--layout">
+        <section class="body__container" id="bodySection">
+
+            <div class="hero__container" id="headerSection"> <!-- I believe this div will be the top part of the page -->
+                <header class="nav--transparent nav--sticky" id="navSection">
+                    <div class="horiz__containter">
+                        <div class="site--logo">Lɛ RESTAURäN</div>
+                        <ul class="nav--bar">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#" class="unchanged">Menu</a></li>
+                            <li><a href="#">Reservations</a></li>
+                            <li><a href="#"id="btn-cart" onclick="shoppingCart()"><ion-icon name="cart-outline"></ion-icon></a></li> 
+                            <li><a href="#" onclick="logout()"><ion-icon name="person-outline"></ion-icon></a></li>
+                            
+                        </ul>
+                    </div>
+                </header>
+
+                <div class="hiddenIt" id="callCard">
+                    <h1 class="title--underBar">Lɛ RESTAURäN</br></h1>
+                    <p>A Sophisticated Fine Dining Experience</br>Offering a Wide Variety of Expedient Food Entrées</p>
+                </div>
+            </div>
+
+            <section class="menu__container"> <!-- Menu-Admin html here -->
+                <input type="button" id="adminMode" value="Admin Logout" class="hiddenIt" onclick="tgl();">
+
+                <p class="add__item--button hiddenIt" id="toAdd" onclick="itemListing()">Add Item</br>(+)</p>
+
+                <section class="menu__category">
+                    <h1>Entrees</h1>
+                    <div class="listing__container" id="entrees--section">
+
+                        <div class="item" id="item00">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Burger</p>
+                                <p>$53.78</p>
+                            </div>    
+                            <p class="item--description">This thing sure is a singular burger. Many flavor much goodness.</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="addItem(['Burger', 53.78, 1])">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item00')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item01">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Birgers</p>
+                                <p>$50.99</p>
+                            </div>
+                            <p class="item--description">This thing sure is not a singular burger. Why one when two.</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="addItem(['Birgers', 50.99, 1])">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item01')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item02">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Chick Borger</p>
+                                <p>$52.99</p>
+                            </div>
+                            <p class="item--description">This thing sure is not a burger. Like a cow but a bird, Yum!</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="addItem(['Chick Borger', 52.99, 1])">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item02')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item03">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Pork Berg</p>
+                                <p>$51.99</p>
+                            </div>
+                            <p class="item--description">This thing sure is a pork burger. I don't know what that is.</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="addItem(['Pork Berg', 51.99, 1])
+                                ">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item03')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item04">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Just Patty</p>
+                                <p>$52.99</p>
+                            </div>
+                            <p class="item--description">No Description-</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="addItem(['Just Patty', 52.99, 1])">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item04')">Remove Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="menu__category">
+                    <h1>Drinks</h1>
+                    <div class="listing__container" id="drinks--section">
+
+                        <div class="item" id="item05">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Bepis</p>
+                                <p>$3.78</p>
+                            </div>    
+                            <p class="item--description">*Movie theater crack sizzle sound*</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item05')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item06">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Coker Cala</p>
+                                <p>$0.99</p>
+                            </div>
+                            <p class="item--description">Liquid garbage</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item06')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item07">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Root Beer</p>
+                                <p>$2.99</p>
+                            </div>
+                            <p class="item--description">Is this caffinated?</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item07')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item08">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Bean Water</p>
+                                <p>$1.99</p>
+                            </div>
+                            <p class="item--description">Hot and sugared ground roasted bean water. Beans beware.</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item08')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item09">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>BW con Milk</p>
+                                <p>$2.99</p>
+                            </div>
+                            <p class="item--description">Hot and sugared ground roasted bean water... with milk. Cows beware.</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item09')">Remove Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="menu__category">
+                    <h1>Sides</h1>
+                    <div class="listing__container" id="sides--section">
+
+                        <div class="item" id="item10">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>German Fries</p>
+                                <p>$5.78</p>
+                            </div>    
+                            <p class="item--description">You've had 'em French, this one just tastes reich.</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item10')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item11">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Boiled Pickles</p>
+                                <p>$5.99</p>
+                            </div>
+                            <p class="item--description">No Description-</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item11')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item12">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Apple Sauce</p>
+                                <p>$4.99</p>
+                            </div>
+                            <p class="item--description">It's just apple sauce... no catch</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item12')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item13">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Rools</p>
+                                <p>$1.99</p>
+                            </div>
+                            <p class="item--description">You get an assortment of six! Rick, rock, royce, hills & whole grain</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item13')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item14">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>CFA Salad</p>
+                                <p>$52.99</p>
+                            </div>
+                            <p class="item--description">It's the Chick-fil-A side salad</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item14')">Remove Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="menu__category">
+                    <h1>Ingredients</h1>
+                    <div class="listing__container" id="ingredients--section">
+
+                        <div class="item" id="item15">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Fallic Fallacies</p>
+                                <p>$0.78</p>
+                            </div>    
+                            <p class="item--description">Just... full of them</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item15')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item16">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>In Bad Taste</p>
+                                <p>$0.99</p>
+                            </div>
+                            <p class="item--description">of mouth</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item16')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item17">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Find God</p>
+                                <p>$0.99</p>
+                            </div>
+                            <p class="item--description">*screenshot*</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item17')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item18">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Slice Cheese</p>
+                                <p>$0.99</p>
+                            </div>
+                            <p class="item--description">No Description-</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item18')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item19">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Lettuce Leaf</p>
+                                <p>$0.99</p>
+                            </div>
+                            <p class="item--description">No Description-</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item19')">Remove Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="menu__category">
+                    <h1>Accessories</h1>
+                    <div class="listing__container" id="accessories--section">
+
+                        <div class="item" id="item20">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Straw</p>
+                                <p>$1.78</p>
+                            </div>    
+                            <p class="item--description">No Description-</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item20')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item21">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Napkin</p>
+                                <p>$1.99</p>
+                            </div>
+                            <p class="item--description">No Description-</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item21')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item22">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Plate</p>
+                                <p>$1.99</p>
+                            </div>
+                            <p class="item--description">No Description-</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item22')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item23">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Chair</p>
+                                <p>$50.02</p>
+                            </div>
+                            <p class="item--description">No Description-</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item23')">Remove Item</button>
+                            </div>
+                        </div>
+
+                        <div class="item" id="item24">
+                            <img src="resources/Images/ItemImages/NoPhoto_Default.jpg" alt="item">
+                            <div class="item--alignment">
+                                <p>Table</p>
+                                <p>$5005.64</p>
+                            </div>
+                            <p class="item--description">No Description-</p>
+                            <div class="button--selection">
+                                <button class="item--button" id="toCart" onclick="">Add to Cart</button>
+                                <button class="item--button hiddenIt" id="toRemove" onclick="itemRemoval('item24')">Remove Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <footer class="nav--footer">
+                <div class="horiz__containter">
+                    <ul class="nav--bar">
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="https://www.youtube.com/@jimmybilbo3471"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-nodejs"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-google"></ion-icon></ion-icon></a></li>
+                    </ul>
+                    <div class="logo--copyright">
+                        <div class="site--logo">Lɛ RESTAURäN</div>
+                        <p>Copyright © 120 - 2022</p>
+                    </div>
+                    <ul class="nav--bar">
+                        <li><a href="#bodySection" alt="Top of Page^"><ion-icon name="chevron-up-circle-outline"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </section>
+
+        <section class="cart__container">
+            <!-- BS shopping cart code because the other stuff was worthless -->
+            <div class="hiddenIt" id="cart"></div>
+            <!-- BS shopping cart code because the other stuff was worthless -->
+        </section> <!-- I think this is where I will have the cart script... I need to think how to make it flex row with the "body__container" -->
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="resources/iterationOne(cart)_brain.js"></script>
 </body>
 </html>
