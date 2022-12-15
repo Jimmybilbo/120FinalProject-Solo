@@ -231,3 +231,20 @@ function logout() {
     document.querySelector("#loginEmail").value = "";
     document.querySelector("#loginPassword").value = "";
 }
+
+
+
+// -------------------------------------BS shopping cart code because the other stuff was worthless
+let cart = document.getElementById("cart")
+let isVisible = false
+
+function shoppingCart() {
+    if (isVisible == false) {
+        isVisible = true
+        cart.classList.replace("hiddenIt", "sliding-cart")
+    } else if (isVisible == true) {
+        isVisible = false
+        cart.classList.replace("sliding-cart","hiddenIt")
+    }
+}
+// -------------------------------------BS shopping cart code because the other stuff was worthless

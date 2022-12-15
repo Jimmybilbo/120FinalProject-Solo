@@ -79,7 +79,7 @@
                             <li><a href="#">Home</a></li>
                             <li><a href="#" class="unchanged">Menu</a></li>
                             <li><a href="#">Reservations</a></li>
-                            <li><a href="#"><ion-icon name="cart-outline"></ion-icon></a></li> 
+                            <li><a href="#"id="btn-cart" onclick="shoppingCart()"><ion-icon name="cart-outline"></ion-icon></a></li> 
                             <li><a href="#" onclick="logout()"><ion-icon name="person-outline"></ion-icon></a></li>
                             
                         </ul>
@@ -475,7 +475,11 @@
             </footer>
         </section>
 
-        <section class="cart__container"></section> <!-- I think this is where I will have the cart script... I need to think how to make it flex row with the "body__container" -->
+        <section class="cart__container">
+            <!-- BS shopping cart code because the other stuff was worthless -->
+            <div class="hiddenIt" id="cart"></div>
+            <!-- BS shopping cart code because the other stuff was worthless -->
+        </section> <!-- I think this is where I will have the cart script... I need to think how to make it flex row with the "body__container" -->
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

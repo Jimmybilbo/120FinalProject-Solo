@@ -31,6 +31,10 @@
     display: none;
 }
 
+.body__container--layout {
+    display: flex;
+}
+
 /* HF Scroll Styling */
 .nav--transparent {
     display: flex;
@@ -45,6 +49,26 @@
     background-color: var(--clr-2);
     border-bottom: solid #312F2F 1px;
 }
+
+/* ---------------------------------BS shopping cart code because the other stuff was worthless-------------------- */
+.sliding-cart {
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    background-color: var(--clr-4);
+    animation: slide-in 1s both;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+/* ---------------------------------BS shopping cart code because the other stuff was worthless-------------------- */
 
 /* Header Container */
 .hero__container {
