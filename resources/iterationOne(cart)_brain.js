@@ -1,4 +1,4 @@
-alert("beep");
+// alert("beep");
 
 // Variables
 var loginForm = document.querySelector("#login");
